@@ -28,17 +28,14 @@ white() {
 }
 
 function logo() {
-green "          ____  ____     _____"
-green "         |  _ )|  _ \   |_   _|___ ____   __  __"
-white "         |  _ \| |_) )    | |/ .__|  _ \_|  \/  |"
-red   "         |____/|____/     |_|\____/\_____|_/\/\_|"
+green "          ##               #     ##       #  "
+green "         #   ### ### ### ###     # # ### ### 
+white "          #  # # ##  ##  # #     ##  # #  #  "
+red   "           # ### ### ### ###     # # ###  ## "
+red   "         ##  #                   ##          "
 }
 function logo1() {
-green "     >>>>                       We Are Not Attacker                             "
-green "     >>>>                       We Are Not Alliance                             "
-white "     >>>>                       We Are Family                                   "
-red   "     >>>>                       We Are The Best :-)                             "
-red   "     >>>>                       @BeyondTeam                                     "
+green "     >>>>                       Hello Mr,Makan | I'm Here                             "
 }
 update() {
   git pull
