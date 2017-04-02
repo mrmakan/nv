@@ -1361,10 +1361,10 @@ local cmdss = redis:hget('group:'..msg.to.id..':cmd', 'bot')
 	end
 if not lang then
 local settings = data[tostring(target)]["settings"] 
-text = "*Group Settings:*\n_Lock edit :_ *"..settings.lock_edit.."*\n_Lock links :_ *"..settings.lock_link.."*\n_Lock tags :_ *"..settings.lock_tag.."*\n_Lock flood :_ *"..settings.flood.."*\n_Lock spam :_ *"..settings.lock_spam.."*\n_Lock mention :_ *"..settings.lock_mention.."*\n_Lock arabic :_ *"..settings.lock_arabic.."*\n_Lock webpage :_ *"..settings.lock_webpage.."*\n_Lock markdown :_ *"..settings.lock_markdown.."*\n_Group welcome :_ *"..settings.welcome.."*\n_Lock pin message :_ *"..settings.lock_pin.."*\n_Bots protection :_ *"..settings.lock_bots.."*\n_Flood sensitivity :_ *"..NUM_MSG_MAX.."*\n*____________________*\n_Bot Commands :_ *"..cmdsss.."*\n_Expire Date :_ *"..expire_date.."*\n*Bot channel*: @BeyondTeam\n*Group Language* : *EN*"
+text = "*SpeedBot Settings 💨*\n_Lock edit :_ *"..settings.lock_edit.."*\n_♋️Lock links :_ *"..settings.lock_link.."*\n_♋️Lock tags :_ *"..settings.lock_tag.."*\n_♋️Lock flood :_ *"..settings.flood.."*\n_♋️Lock spam :_ *"..settings.lock_spam.."*\n_♋️Lock mention :_ *"..settings.lock_mention.."*\n_♋️Lock arabic :_ *"..settings.lock_arabic.."*\n_♋️Lock webpage :_ *"..settings.lock_webpage.."*\n_♋️Lock markdown :_ *"..settings.lock_markdown.."*\n_♋️Group welcome :_ *"..settings.welcome.."*\n_♋️Lock pin message :_ *"..settings.lock_pin.."*\n_♋️Bots protection :_ *"..settings.lock_bots.."*\n_♋️Flood sensitivity :_ *"..NUM_MSG_MAX.."*\n*〰〰〰〰〰〰〰〰〰〰〰〰*\n_👾 SpeedBot 《1⃣ Week 🆓》_ *"..cmdsss.."*\n_⏰Expire Date :_ *"..expire_date.."*\n*📰 Bot channel: @SpeedBot_iR\n*🏳‍🌈Group Language : 🇬🇧"
 else
 local settings = data[tostring(target)]["settings"] 
- text = "*تنظیمات گروه:*\n_قفل ویرایش پیام :_ *"..settings.lock_edit.."*\n_قفل لینک :_ *"..settings.lock_link.."*\n_قفل تگ :_ *"..settings.lock_tag.."*\n_قفل پیام مکرر :_ *"..settings.flood.."*\n_قفل هرزنامه :_ *"..settings.lock_spam.."*\n_قفل فراخوانی :_ *"..settings.lock_mention.."*\n_قفل عربی :_ *"..settings.lock_arabic.."*\n_قفل صفحات وب :_ *"..settings.lock_webpage.."*\n_قفل فونت :_ *"..settings.lock_markdown.."*\n_پیام خوشآمد گویی :_ *"..settings.welcome.."*\n_قفل سنجاق کردن :_ *"..settings.lock_pin.."*\n_محافظت در برابر ربات ها :_ *"..settings.lock_bots.."*\n_حداکثر پیام مکرر :_ *"..NUM_MSG_MAX.."*\n*____________________*\n_دستورات ربات :_ *"..cmdsss.."*\n_تاریخ انقضا :_ *"..expire_date.."*\n*کانال ما*: @BeyondTeam\n_زبان سوپرگروه_ : *FA*"
+ text = "*SpeedBot Settings 💨*\n_قفل ویرایش پیام :_ *"..settings.lock_edit.."*\n_قفل لینک :_ *"..settings.lock_link.."*\n_قفل تگ :_ *"..settings.lock_tag.."*\n_قفل پیام مکرر :_ *"..settings.flood.."*\n_قفل هرزنامه :_ *"..settings.lock_spam.."*\n_قفل فراخوانی :_ *"..settings.lock_mention.."*\n_قفل عربی :_ *"..settings.lock_arabic.."*\n_قفل صفحات وب :_ *"..settings.lock_webpage.."*\n_قفل فونت :_ *"..settings.lock_markdown.."*\n_پیام خوشآمد گویی :_ *"..settings.welcome.."*\n_قفل سنجاق کردن :_ *"..settings.lock_pin.."*\n_محافظت در برابر ربات ها :_ *"..settings.lock_bots.."*\n_حداکثر پیام مکرر :_ *"..NUM_MSG_MAX.."*\n*____________________*\n_دستورات ربات :_ *"..cmdsss.."*\n_تاریخ انقضا :_ *"..expire_date.."*\n*کانال ما*: @BeyondTeam\n_زبان سوپرگروه_ : *FA*"
 end
 local text = string.gsub(text, 'yes', '🔐')
 local text = string.gsub(text, 'no', '🔓')
@@ -3170,196 +3170,328 @@ end
 if matches[1] == "help" and is_mod(msg) then
 if not lang then
 text = [[
-*Beyond Bot Commands:*
-*!setowner* `[username|id|reply]` 
-_Set Group Owner(Multi Owner)_
-*!remowner* `[username|id|reply]` 
- _Remove User From Owner List_
-*!promote* `[username|id|reply]` 
-_Promote User To Group Admin_
-*!demote* `[username|id|reply]` 
-_Demote User From Group Admins List_
-*!setflood* `[2-50]`
-_Set Flooding Number_
-*!silent* `[username|id|reply]` 
-_Silent User From Group_
-*!unsilent* `[username|id|reply]` 
-_Unsilent User From Group_
-*!kick* `[username|id|reply]` 
-_Kick User From Group_
-*!ban* `[username|id|reply]` 
-_Ban User From Group_
-*!unban* `[username|id|reply]` 
-_UnBan User From Group_
-*!res* `[username]`
-_Show User ID_
-*!id* `[reply]`
-_Show User ID_
-*!whois* `[id]`
-_Show User's Username And Name_
-*!lock* `[link | tag | edit | arabic | webpage | bots | spam | flood | markdown | mention | pin | cmds]`
-_If This Actions Lock, Bot Check Actions And Delete Them_
-*!unlock* `[link | tag | edit | arabic | webpage | bots | spam | flood | markdown | mention | pin | cmds]`
-_If This Actions Unlock, Bot Not Delete Them_
-*!mute* `[gif | photo | document | sticker | keyboard | video | text | forward | location | audio | voice | contact | all]`
-_If This Actions Lock, Bot Check Actions And Delete Them_
-*!unmute* `[gif | photo | document | sticker | keyboard | video | text | forward | location | audio | voice | contact | all]`
-_If This Actions Unlock, Bot Not Delete Them_
-*!set*`[rules | name | photo | link | about | welcome]`
-_Bot Set Them_
-*!clean* `[bans | mods | bots | rules | about | silentlist | filtelist | welcome]`   
-_Bot Clean Them_
-*!filter* `[word]`
-_Word filter_
-*!unfilter* `[word]`
-_Word unfilter_
-*!pin* `[reply]`
-_Pin Your Message_
-*!unpin* 
-_Unpin Pinned Message_
-*!welcome enable/disable*
-_Enable Or Disable Group Welcome_
-*!settings*
-_Show Group Settings_
-*!cmds* `[member | moderator | owner]`	
-_set cmd_
-*!mutelist*
-_Show Mutes List_
-*!silentlist*
-_Show Silented Users List_
-*!filterlist*
-_Show Filtered Words List_
-*!banlist*
-_Show Banned Users List_
-*!ownerlist*
-_Show Group Owners List_ 
-*!modlist* 
-_Show Group Moderators List_
-*!rules*
-_Show Group Rules_
-*!about*
-_Show Group Description_
-*!id*
-_Show Your And Chat ID_
-*!gpinfo*
-_Show Group Information_
-*!newlink*
-_Create A New Link_
-*!newlink pv*
-_Create A New Link The Pv_
-*!link*
-_Show Group Link_
-*!link pv*
-_Send Group Link In Your Private Message_
-*!setwelcome [text]*
-_set Welcome Message_
-*!helptools*
-_Show Tools Help_
-*!helpfun*
-_Show Fun Help_
-*!helpmute*
-_Show mute Help_
-_You Can Use_ *[!/#]* _To Run The Commands_
-_This Help List Only For_ *Moderators/Owners!*
-_Its Means, Only Group_ *Moderators/Owners* _Can Use It!_
-*Good luck ;)*]]
+✳️ SpeedBot Anti Spam
+📢 Info : V1.34
+〰〰〰〰〰〰〰〰〰〰〰〰〰〰
+
+🔸!setowner
+🔸[username|id|reply]
+🔹Set Group Owner
+
+🔸!remowner 
+🔸[username|id|reply] 
+🔹 Remove User From Owner List
+
+🔸!promote
+🔸[username|id|reply] 
+🔹Promote User To Group Admin
+
+🔸!demote 
+🔸[username|id|reply] 
+🔹Demote User From Group Admins       List
+🔸!setflood 
+🔸[2-50]
+🔹Set Flooding Number
+
+🔸!silent 
+🔸[username|id|reply] 
+🔹Silent User From Group
+
+🔸!unsilent 
+🔸[username|id|reply] 
+🔹Unsilent User From Group
+
+🔸!kick [username|id|reply] 
+🔹Kick User From Group
+
+🔸!ban [username|id|reply] 
+🔹Ban User From Group
+
+🔸!unban [username|id|reply] 
+🔹UnBan User From Group
+
+🔸!res [username]
+🔹Show User ID
+
+🔸!id [reply]
+🔹Show User ID
+
+🔸!whois [id]
+🔹Show User's Username And Name
+🔸!lock 
+🔸[link | tag | edit | arabic | webpage | bots | spam | flood | markdown | mention | pin | cmds]
+🔹If This Actions Lock, Bot Check Actions And Delete Them
+
+🔸!unlock 
+🔸[link | tag | edit | arabic | webpage | bots | spam | flood | markdown | mention | pin | cmds]
+🔹If This Actions Unlock, Bot Not Delete Them
+
+🔸!mute 
+🔸[gif | photo | document | sticker | keyboard | video | text | forward | location | audio | voice | contact | all]
+🔹If This Actions Lock, Bot Check Actions And Delete Them
+
+🔸!unmute 
+🔸[gif | photo | document | sticker | keyboard | video | text | forward | location | audio | voice | contact | all]
+🔹If This Actions Unlock, Bot Not Delete Them
+
+🔸!set
+🔸[rules | name | photo | link | about | welcome]
+🔹Bot Set Them
+
+🔸!clean 
+🔸[bans | mods | bots | rules | about | silentlist | filtelist | welcome]   
+🔹Bot Clean Them
+
+🔸!filter [word]
+🔹Word filter
+
+🔸!unfilter [word]
+🔹Word unfilter
+
+🔸!pin [reply]
+🔹Pin Your Message
+
+🔸!unpin 
+🔹Unpin Pinned Message
+
+🔸!welcome enable/disable
+🔹Enable Or Disable Group Welcome
+
+🔸!settings
+🔹Show Group Settings
+
+🔸!cmds 
+🔸[member | moderator | owner] 
+🔹set cmd
+
+🔸!mutelist
+🔹Show Mutes List
+
+🔸!silentlist
+🔹Show Silented Users List
+
+🔸!filterlist
+🔹Show Filtered Words List
+
+🔸!banlist
+🔹Show Banned Users List
+
+🔸!ownerlist
+🔹Show Group Owners List 
+
+🔸!modlist 
+🔹Show Group Moderators List
+
+🔸!rules
+🔹Show Group Rules
+
+🔸!about
+🔹Show Group Description
+
+🔸!id
+🔹Show Your And Chat ID
+
+🔸!gpinfo
+🔹Show Group Information
+
+🔸!newlink
+🔹Create A New Link
+
+🔸!newlink pv
+🔹Create A New Link The Pv
+
+🔸!link
+🔹Show Group Link
+
+🔸!link pv
+🔹Send Group Link In Your Private Message
+
+🔸!setwelcome [text]
+🔹set Welcome Message
+
+🔸!helptools
+🔹Show Tools Help
+
+〰〰〰〰〰〰〰〰〰〰〰〰〰〰
+✳️ Help Commands 
+💠V1.34
+
+🔴!helpfun
+🔵Show Fun Help
+
+🔴!helpmute
+🔵Show mute Help
+
+🔲You Can Use [!/#] To Run The Commands
+🔘This Help List Only For Moderators/Owners!
+🔳Its Means, Only Group Moderators/Owners Can Use It!
+
+〰〰〰〰〰〰〰〰〰〰〰〰〰〰
+For Buy ❎ @MakanDo
+🌐 Channel : @SpeedBot_iR]]
 
 elseif lang then
 
 text = [[
-*دستورات ربات بیوند:*
-*!setowner* `[username|id|reply]` 
-_انتخاب مالک گروه(قابل انتخاب چند مالک)_
-*!remowner* `[username|id|reply]` 
- _حذف کردن فرد از فهرست مالکان گروه_
-*!promote* `[username|id|reply]` 
-_ارتقا مقام کاربر به مدیر گروه_
-*!demote* `[username|id|reply]` 
-_تنزیل مقام مدیر به کاربر_
-*!setflood* `[2-50]`
-_تنظیم حداکثر تعداد پیام مکرر_
-*!silent* `[username|id|reply]` 
-_بیصدا کردن کاربر در گروه_
-*!unsilent* `[username|id|reply]` 
-_در آوردن کاربر از حالت بیصدا در گروه_
-*!kick* `[username|id|reply]` 
-_حذف کاربر از گروه_
-*!ban* `[username|id|reply]` 
-_مسدود کردن کاربر از گروه_
-*!unban* `[username|id|reply]` 
-_در آوردن از حالت مسدودیت کاربر از گروه_
-*!res* `[username]`
-_نمایش شناسه کاربر_
-*!id* `[reply]`
-_نمایش شناسه کاربر_
-*!whois* `[id]`
-_نمایش نام کاربر, نام کاربری و اطلاعات حساب_
-*!lock* `[link | tag | edit | arabic | webpage | bots | spam | flood | markdown | mention | pin]`
-_در صورت قفل بودن فعالیت ها, ربات آنهارا حذف خواهد کرد_
-*!unlock* `[link | tag | edit | arabic | webpage | bots | spam | flood | markdown | mention | pin]`
-_در صورت قفل نبودن فعالیت ها, ربات آنهارا حذف نخواهد کرد_
-*!mute* `[gif | photo | document | sticker | keyboard | video | text | forward | location | audio | voice | contact | all]`
-_در صورت بیصدد بودن فعالیت ها, ربات آنهارا حذف خواهد کرد_
-*!unmute* `[gif | photo | document | sticker | keyboard | video | text | forward | location | audio | voice | contact | all]`
-_در صورت بیصدا نبودن فعالیت ها, ربات آنهارا حذف نخواهد کرد_
-*!set*`[rules | name | photo | link | about | welcome]`
-_ربات آنهارا ثبت خواهد کرد_
-*!clean* `[bans | mods | bots | rules | about | silentlist | filterlist | welcome]`   
-_ربات آنهارا پاک خواهد کرد_
-*!filter* `[word]`
-_فیلتر‌کلمه مورد نظر_
-*!unfilter* `[word]`
-_ازاد کردن کلمه مورد نظر_
-*!pin* `[reply]`
-_ربات پیام شمارا در گروه سنجاق خواهد کرد_
-*!unpin* 
-_ربات پیام سنجاق شده در گروه را حذف خواهد کرد_
-*!welcome enable/disable*
-_فعال یا غیرفعال کردن خوشآمد گویی_
-*!settings*
-_نمایش تنظیمات گروه_
-*!cmds* `[member | moderator | owner]`	
-_نتخاب کردن قفل cmd بر چه مدیریتی_
-*!mutelist*
-_نمایش فهرست بیصدا های گروه_
-*!silentlist*
-_نمایش فهرست افراد بیصدا_
-*!filterlist*
-_نمایش لیست کلمات فیلتر شده_
-*!banlist*
-_نمایش افراد مسدود شده از گروه_
-*!ownerlist*
-_نمایش فهرست مالکان گروه_ 
-*!modlist* 
-_نمایش فهرست مدیران گروه_
-*!rules*
-_نمایش قوانین گروه_
-*!about*
-_نمایش درباره گروه_
-*!id*
-_نمایش شناسه شما و گروه_
-*!gpinfo*
-_نمایش اطلاعات گروه_
-!*newlink*
-_ساخت لینک جدید_
-!*newlink pv*
-_ساخت لینک جدید در پیوی_
-*!link*
-_نمایش لینک گروه_
-*!link pv*
-_ارسال لینک گروه به چت خصوصی شما_
-*!setwelcome [text]*
-_ثبت پیام خوش آمد گویی_
-*!helptools*
-_نمایش راهنمای Tools_
-*!helpfun*
-_نمایش راهنمای سرگرمی_
-*!helpmute*
-_نمایش دستورات بیصدا های گروه_
-_شما میتوانید از [!/#] در اول دستورات برای اجرای آنها بهره بگیرید
-این راهنما فقط برای مدیران/مالکان گروه میباشد!
-این به این معناست که فقط مدیران/مالکان گروه میتوانند از دستورات بالا استفاده کنند!_
-*موفق باشید ;)*]]
+✳️ SpeedBot Anti Spam
+📢 Info : V1.34
+〰〰〰〰〰〰〰〰〰〰〰〰〰〰
+
+🔸!setowner
+🔸[username|id|reply]
+🔹Set Group Owner
+
+🔸!remowner 
+🔸[username|id|reply] 
+🔹 Remove User From Owner List
+
+🔸!promote
+🔸[username|id|reply] 
+🔹Promote User To Group Admin
+
+🔸!demote 
+🔸[username|id|reply] 
+🔹Demote User From Group Admins       List
+🔸!setflood 
+🔸[2-50]
+🔹Set Flooding Number
+
+🔸!silent 
+🔸[username|id|reply] 
+🔹Silent User From Group
+
+🔸!unsilent 
+🔸[username|id|reply] 
+🔹Unsilent User From Group
+
+🔸!kick [username|id|reply] 
+🔹Kick User From Group
+
+🔸!ban [username|id|reply] 
+🔹Ban User From Group
+
+🔸!unban [username|id|reply] 
+🔹UnBan User From Group
+
+🔸!res [username]
+🔹Show User ID
+
+🔸!id [reply]
+🔹Show User ID
+
+🔸!whois [id]
+🔹Show User's Username And Name
+🔸!lock 
+🔸[link | tag | edit | arabic | webpage | bots | spam | flood | markdown | mention | pin | cmds]
+🔹If This Actions Lock, Bot Check Actions And Delete Them
+
+🔸!unlock 
+🔸[link | tag | edit | arabic | webpage | bots | spam | flood | markdown | mention | pin | cmds]
+🔹If This Actions Unlock, Bot Not Delete Them
+
+🔸!mute 
+🔸[gif | photo | document | sticker | keyboard | video | text | forward | location | audio | voice | contact | all]
+🔹If This Actions Lock, Bot Check Actions And Delete Them
+
+🔸!unmute 
+🔸[gif | photo | document | sticker | keyboard | video | text | forward | location | audio | voice | contact | all]
+🔹If This Actions Unlock, Bot Not Delete Them
+
+🔸!set
+🔸[rules | name | photo | link | about | welcome]
+🔹Bot Set Them
+
+🔸!clean 
+🔸[bans | mods | bots | rules | about | silentlist | filtelist | welcome]   
+🔹Bot Clean Them
+
+🔸!filter [word]
+🔹Word filter
+
+🔸!unfilter [word]
+🔹Word unfilter
+
+🔸!pin [reply]
+🔹Pin Your Message
+
+🔸!unpin 
+🔹Unpin Pinned Message
+
+🔸!welcome enable/disable
+🔹Enable Or Disable Group Welcome
+
+🔸!settings
+🔹Show Group Settings
+
+🔸!cmds 
+🔸[member | moderator | owner] 
+🔹set cmd
+
+🔸!mutelist
+🔹Show Mutes List
+
+🔸!silentlist
+🔹Show Silented Users List
+
+🔸!filterlist
+🔹Show Filtered Words List
+
+🔸!banlist
+🔹Show Banned Users List
+
+🔸!ownerlist
+🔹Show Group Owners List 
+
+🔸!modlist 
+🔹Show Group Moderators List
+
+🔸!rules
+🔹Show Group Rules
+
+🔸!about
+🔹Show Group Description
+
+🔸!id
+🔹Show Your And Chat ID
+
+🔸!gpinfo
+🔹Show Group Information
+
+🔸!newlink
+🔹Create A New Link
+
+🔸!newlink pv
+🔹Create A New Link The Pv
+
+🔸!link
+🔹Show Group Link
+
+🔸!link pv
+🔹Send Group Link In Your Private Message
+
+🔸!setwelcome [text]
+🔹set Welcome Message
+
+🔸!helptools
+🔹Show Tools Help
+
+〰〰〰〰〰〰〰〰〰〰〰〰〰〰
+✳️ Help Commands 
+💠V1.34
+
+🔴!helpfun
+🔵Show Fun Help
+
+🔴!helpmute
+🔵Show mute Help
+
+🔲You Can Use [!/#] To Run The Commands
+🔘This Help List Only For Moderators/Owners!
+🔳Its Means, Only Group Moderators/Owners Can Use It!
+
+〰〰〰〰〰〰〰〰〰〰〰〰〰〰
+For Buy ❎ @MakanDo
+🌐 Channel : @SpeedBot_iR]]
 end
 return text
 end
@@ -3440,9 +3572,9 @@ local lang = redis:get(hash)
 rules = administration[arg.chat_id]['rules']
 else
    if not lang then
-     rules = "ℹ️ The Default Rules :\n1⃣ No Flood.\n2⃣ No Spam.\n3⃣ No Advertising.\n4⃣ Try to stay on topic.\n5⃣ Forbidden any racist, sexual, homophobic or gore content.\n➡️ Repeated failure to comply with these rules will cause ban.\n@BeyondTeam"
+     rules = "ℹ️ The Default Rules :\n1⃣ No Flood.\n2⃣ No Spam.\n3⃣ No Advertising.\n4⃣ Try to stay on topic.\n5⃣ Forbidden any racist, sexual, homophobic or gore content.\n➡️ Repeated failure to comply with these rules will cause ban.\n@SpeedBot_iR"
     elseif lang then
-       rules = "ℹ️ قوانین پپیشفرض:\n1⃣ ارسال پیام مکرر ممنوع.\n2⃣ اسپم ممنوع.\n3⃣ تبلیغ ممنوع.\n4⃣ سعی کنید از موضوع خارج نشید.\n5⃣ هرنوع نژاد پرستی, شاخ بازی و پورنوگرافی ممنوع .\n➡️ از قوانین پیروی کنید, در صورت عدم رعایت قوانین اول اخطار و در صورت تکرار مسدود.\n@BeyondTeam"
+       rules = "ℹ️ قوانین پپیشفرض:\n1⃣ ارسال پیام مکرر ممنوع.\n2⃣ اسپم ممنوع.\n3⃣ تبلیغ ممنوع.\n4⃣ سعی کنید از موضوع خارج نشید.\n5⃣ هرنوع نژاد پرستی, شاخ بازی و پورنوگرافی ممنوع .\n➡️ از قوانین پیروی کنید, در صورت عدم رعایت قوانین اول اخطار و در صورت تکرار مسدود.\n@SpeedBot_iR"
  end
 end
 if data.username_ then
